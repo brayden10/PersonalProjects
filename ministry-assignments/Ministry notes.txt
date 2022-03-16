@@ -1,0 +1,39 @@
+This is a personal project I will call Ministry assignments. The purpose of this project is to keep track of ministering assignments. 
+
+Secritaries
+- log in
+- log out
+- view Secritarie homepage
+- select district 
+- select companionship
+- select minister
+- edit districts / companionships / minister info
+- assign interview time 
+
+Tables 
+
+Districts
+ - district_id         fk
+ - district_leader     varchar(20) not null 
+
+Ministers
+ - minister_id        		fk
+ - name                		varchar(50) not null
+ - number 			varchar(50) not null unique
+ - t_l_contacted 		varchar(50) 
+ - t_l_interviewed 		varchar(50)
+ - t_l_i_w_companion		varchar(50)
+ - interviewed_by 		varchar(50) 
+ - notes				varchar(10000)
+ - next_interview_time		varchar(50)
+ - assigned_to_minitser_to	varchar(500)
+ 
+
+Secretaries
+- sec_id        fk
+- username       varchar(20) not null unique
+- password       varchar(20) not null 
+- first_name     varchar(20) not null 
+- last_name      varchar(20) not null 
+- number       	varchar(20) not null
+- a_district 	 varchar(20) fk not null
